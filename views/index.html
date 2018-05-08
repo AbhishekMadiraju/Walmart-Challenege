@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walmart Challenge</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Walmart Search API Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class = "bgi">
+        <img src = "walmart-logo-transparent.png">
+    </div>
+    <div class = "description">
+        <h1>Walmart Search API Demo</h1>
+    </div>
+    <div class="search">
+        <input type="text" id="search-text" placeholder="Enter search item">
+        <button type="submit" id="search-button">Search</button>
+        <h3 id="result"></h3>
+    </div>
+    <h2>Usage: <br>curl http://localhost:3000/search/&ltsearch-item&gt</h2>
+    <script>
+            $("#search-button").click(() => {
+                var item = $("#search-text").val();
+                console.log(item);
+                var res = $("#result");
+                $.get("http://localhost:3000/search/" + item, (data) => {
+                    if(data.hasOwnProperty("result")) {
+                        if(data.result.length != 0){
+                            res.text("Search Result: "+ data.result);
+                        } else {
+                            res.text("Item not found.");
+                        }
+                    } else {
+                        res.text(data.message);
+                    }
+                })
+            })
+        </script>
+</body>
+</html>

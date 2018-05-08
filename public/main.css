@@ -1,0 +1,51 @@
+body {
+    background-color: white;
+}
+
+.bgi img {
+    width: 20%;
+}
+
+.description {
+    font-family: 'Titan One', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+.description h1 {
+    color: #007dc6;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: 'Titan One', cursive;
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+    color:black;
+}
+
+.search {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.search h3 {
+    color:black;
+}
+
+#search-button {
+    height: 35px;
+    width: 80px;
+}
+
+#search-text {
+    width: 300px;
+    height: 30px;
+    border-color: #007dc6;
+    border-style: solid;
+    text-align: center;
+    font-size: 100%;
+}
+
