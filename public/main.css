@@ -18,11 +18,12 @@ body {
 }
 
 h2 {
-    font-family: 'Titan One', cursive;
-    font-size: 20px;
-    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
     font-weight: normal;
-    color:black;
+    color: black;
+    text-align: left;
+    
 }
 
 .search {
